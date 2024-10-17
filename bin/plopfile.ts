@@ -8,9 +8,15 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 export default function (plop: NodePlopAPI) {
-  const modulesPath = path.join(__dirname, 'modules');
+  const plopJsonPath = path.join(__dirname, '../.plop.json'); 
+  if (!fs.existsSync(plopJsonPath)) {
+    console.error('\x1b[31mError: .plop.json file not found. Please place it at the root of your repository.\x1b[0m');
+    process.exit(1);
+  }
+
+  const modulesPath = path.join(__dirname, '../modules');
   if (!fs.existsSync(modulesPath)) {
-    console.error(`Modules directory does not exist at path: ${modulesPath}`);
+    console.error(`\x1b[31mError: Modules directory does not exist at path: ${modulesPath}\x1b[0m`);
     process.exit(1);
   }
 
@@ -89,7 +95,7 @@ export default function (plop: NodePlopAPI) {
         {
           type: 'add',
           path: `${componentFolder}/${name}.vue`,
-          templateFile: './plop-template/component.vue.hbs',
+          templateFile: '../plop-template/component.vue.hbs',
           data: {
             props: data.features.includes('props'),
             state: data.features.includes('state'),
@@ -102,22 +108,22 @@ export default function (plop: NodePlopAPI) {
         {
           type: 'add',
           path: `${componentFolder}/${name}.spec.ts`,
-          templateFile: './plop-template/unit-test.spec.hbs',
+          templateFile: '../plop-template/unit-test.spec.hbs',
         },
         {
           type: 'add',
           path: `${componentFolder}/index.ts`,
-          templateFile: './plop-template/barel-file.ts.hbs',
+          templateFile: '../plop-template/barel-file.ts.hbs',
         },
         {
           type: 'add',
           path: `${componentFolder}/I${name}Types.ts`,
-          templateFile: './plop-template/component-types.ts.hbs',
+          templateFile: '../plop-template/component-types.ts.hbs',
         },
         {
           type: 'add',
           path: `${componentFolder}/i18n.ts`,
-          templateFile: './plop-template/i18n.ts.hbs',
+          templateFile: '../plop-template/i18n.ts.hbs',
           data: { name: name },
         },
       ];
