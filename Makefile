@@ -6,7 +6,7 @@ default:
 ##
 # CHANGELOG vars and targets
 ##
-CONV_CHL_IMAGE := justcoded/php-conventional-changelog:latest
+CONV_CHL_IMAGE :=  ghcr.io/justcoded/plopjs:latest
 CONV_CHL_DR := docker run -it --rm --volume "$$PWD":/codebase ${CONV_CHL_IMAGE} bash
 CONV_CHL_CMD := conventional-changelog --config changelog-config.php
 
