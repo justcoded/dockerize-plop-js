@@ -1,14 +1,7 @@
-.PHONY: default install uninstall chl chl-first
+.PHONY: default chl chl-first
 
 default:
-	@echo 'Git extras installation helper from JustCoded'
-
-install:
-	sudo cp -f ./bin/* /usr/local/bin/
-	sudo chmod +x /usr/local/bin/git-*
-
-uninstall:
-	sudo rm /usr/local/bin/git-*
+	@echo 'Plop helper from JustCoded'
 
 ##
 # CHANGELOG vars and targets
