@@ -17,5 +17,5 @@ This repository provides a Dockerized setup for [Plop.js](https://plopjs.com/), 
 1. **Run the Docker image**:
    You can use the local image name for now, or once finalized, use the public image URL provided by GitHub Actions:
    ```bash
-   docker run --rm -it plop_plop
+   docker run --rm -it ghcr.io/justcoded/plopjs:latest
    ```

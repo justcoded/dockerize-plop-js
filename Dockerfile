@@ -6,7 +6,6 @@ RUN npm install -g plop tsx cross-env typescript
 COPY ./plop/* /plop
 
 CMD ["bash", "-c", "npm run plop"]
-SHELL ["/bin/bash", "-c"]
 
 WORKDIR /plop
 
