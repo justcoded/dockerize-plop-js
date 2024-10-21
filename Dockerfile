@@ -5,9 +5,7 @@ RUN mkdir /codebase
 RUN npm install -g plop tsx cross-env typescript
 COPY ./plop/* /plop
 
-
-CMD ['npm', 'run', 'plop']
-SHELL ["/bin/bash", "-c"]
+CMD ["bash", "-c", "npm run plop"]
 
 WORKDIR /plop
 
