@@ -62,8 +62,8 @@ jobs:
           context: .
           push: true
           tags: |
-            /${{secrets.DOCKERHUB_USERNAME}}/plopjs:latest
-            /${{secrets.DOCKERHUB_USERNAME}}/plopjs:${{steps.set_version.outputs.no-dash}}
+            ghcr.io/justcoded/plopjs/plopjs:latest
+            ghcr.io/justcoded/plopjs/plopjs:${{steps.set_version.outputs.no-dash}}
 
 
 
