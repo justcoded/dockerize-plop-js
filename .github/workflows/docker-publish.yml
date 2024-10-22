@@ -62,17 +62,7 @@ jobs:
           context: .
           push: true
           tags: |
-            ghcr.io/justcoded/plopjs/plopjs:latest
-            ghcr.io/justcoded/plopjs/plopjs:${{steps.set_version.outputs.no-dash}}
+            ghcr.io/justcoded/plopjs:latest
+            ghcr.io/justcoded/plopjs:${{steps.set_version.outputs.no-dash}}
 
-
-
-
-#      - name: Build and push Docker image
-#        uses: docker/build-push-action@f2a1d5e99d037542a71f64918e516c093c6f3fc4
-#        with:
-#          context: .
-#          push: true
-#          tags: ${{ steps.process-tags.outputs.tags }}
-#          labels: ${{ steps.meta.outputs.labels }}
 
