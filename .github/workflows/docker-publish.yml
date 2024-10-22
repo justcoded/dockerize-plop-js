@@ -43,7 +43,7 @@ jobs:
 
       - name: Process tags
         id: process-tags
-        run: echo "::set-output name=tags::${{ steps.meta.outputs.tags:1 }}"
+        run: run: echo "::set-output name=tags::$(echo ${{ steps.meta.outputs.tags }} | sed 's/^.//')"
 
       - name: Build and push Docker image
         uses: docker/build-push-action@f2a1d5e99d037542a71f64918e516c093c6f3fc4
