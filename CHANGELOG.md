@@ -9,6 +9,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ---
 <!--- END HEADER -->
 
+## [0.2.0](https://github.com/justcoded/dockerize-plop-js/compare/v0.1.0...v0.2.0) (2024-10-30)
+### Bug Fixes
+
+* Fixed missing autocomplete prompt dependency
+
+
+---
+
 ## [0.1.0](https://github.com/justcoded/dockerize-plop-js/compare/c11fb61e0409ea1d33490caa0d420a7768bd1286...v1.0.0) (2024-10-18)
 ### Features
 
