@@ -4,6 +4,7 @@ RUN mkdir /plop
 RUN mkdir /codebase
 RUN npm install -g cross-env plop tsx typescript inquirer-autocomplete-prompt
 RUN npm install -g @types/inquirer-autocomplete-prompt @types/node
+RUN npm install -g yaml
 
 COPY ./plop/* /plop
 
