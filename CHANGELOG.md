@@ -9,6 +9,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ---
 <!--- END HEADER -->
 
+## [0.5.0](https://github.com/justcoded/dockerize-plop-js/compare/v0.4.0...v0.5.0) (2025-05-16)
+### Features
+
+* Added node-fetch module to be able to fetch insecure local urls
+
+
+---
+
 ## [0.4.0](https://github.com/justcoded/dockerize-plop-js/compare/v0.3.0...v0.4.0) (2025-05-14)
 ### Features
 
